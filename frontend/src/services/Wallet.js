@@ -19,7 +19,7 @@ const getWalletDetails = async () => {
 const convertCurrency = async (fromCurrency) => {
   let currentWallet = await getWalletDetails();
   currentWallet = Object.fromEntries(
-    currentWallet.map((item) => {
+    currentWallet?.map((item) => {
       return Object.values(item);
     })
   );

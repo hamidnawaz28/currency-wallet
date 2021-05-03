@@ -51,7 +51,7 @@ const Routes = () => {
     localStorage.setItem("digitalUser", "{}");
     setIsAuthenticated(false);
   };
-  debugger;
+
   return (
     <Router>
       {isAuthenticated ? (

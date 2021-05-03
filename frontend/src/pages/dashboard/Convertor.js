@@ -20,12 +20,16 @@ const useStyles = makeStyles({
 });
 const Convertor = () => {
   const { heading, converter } = useStyles();
+
   const [fromAmount, setFromAmount] = useState("EUR");
   const [currencyList, setCurrencyList] = useState([]);
+
   const { fromResult } = useConversion(fromAmount);
+
   useEffect(async () => {
     setCurrencyList(await getCurrencyList());
   }, []);
+
   return (
     <>
       <h3 className={heading}>Total {"&"} Converstion</h3>

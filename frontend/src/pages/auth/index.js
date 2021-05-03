@@ -3,7 +3,6 @@ import { TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { logIn, signUp } from "../../services/Auth";
 import { useHistory } from "react-router-dom";
-import { Redirect } from "react-router-dom";
 const useStyles = makeStyles({
   container: {
     width: "20%",
@@ -19,8 +18,7 @@ const UserManage = ({ type, setAuth }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { container, items } = useStyles();
-  useEffect(() => {}, []);
-  console.log(type);
+
   const authHandle = async () => {
     let data = {
       username,

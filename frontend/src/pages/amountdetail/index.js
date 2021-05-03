@@ -17,7 +17,7 @@ const AmountDetail = () => {
   }, []);
   return (
     <>
-      <h1 className={heading}>Account Details</h1>
+      <h1 className={heading}>Details</h1>
       <Content data={data} headers={accountDetails} />
     </>
   );

@@ -7,7 +7,10 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
+  Box,
 } from "@material-ui/core";
+import { Close } from "@material-ui/icons";
 import { AddBox } from "@material-ui/icons";
 function PopUpForm({
   title,
@@ -25,11 +28,20 @@ function PopUpForm({
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title">
-          <Grid container alignItems="center">
-            <Grid item>
+          <Grid container>
+            <Grid xs={9}>
               <Typography variant="h5" component="h2">
                 {title}
               </Typography>
+            </Grid>
+            <Grid xl={3}>
+              <IconButton
+                color="primary"
+                variant="contained"
+                onClick={setFormState}
+              >
+                <Close />
+              </IconButton>
             </Grid>
           </Grid>
         </DialogTitle>
@@ -43,13 +55,6 @@ function PopUpForm({
               type="submit"
             >
               Save
-            </Button>
-            <Button
-              onClick={setFormState}
-              variant={"contained"}
-              color="primary"
-            >
-              Cancel
             </Button>
           </DialogActions>
         </Grid>
